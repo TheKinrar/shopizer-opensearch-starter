@@ -186,6 +186,7 @@ public class SearchModuleImpl implements SearchModule {
 	}
 	
 	private void deleteDocument(String language, Long documentId) throws Exception {
+		// ok fine
 		
 		StringBuilder productsIndex = new StringBuilder().append(PRODUCTS_INDEX).append(language);
 		StringBuilder keywordIndex = new StringBuilder().append(KEYWORDS_INDEX).append(language);
