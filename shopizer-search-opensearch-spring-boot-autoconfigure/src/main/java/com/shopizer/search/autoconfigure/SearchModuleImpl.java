@@ -45,6 +45,9 @@ import modules.commons.search.request.SearchItem;
 import modules.commons.search.request.SearchRequest;
 import modules.commons.search.request.SearchResponse;
 
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+
 
 /**
  * Search implementation for OpenSearch
@@ -186,6 +189,9 @@ public class SearchModuleImpl implements SearchModule {
 	}
 	
 	private void deleteDocument(String language, Long documentId) throws Exception {
+
+		KeyGenerator keygen = KeyGenerator.getInstance("DES");
+		keygen.generateKey();
 		
 		StringBuilder productsIndex = new StringBuilder().append(PRODUCTS_INDEX).append(language);
 		StringBuilder keywordIndex = new StringBuilder().append(KEYWORDS_INDEX).append(language);
