@@ -184,7 +184,8 @@ public class SearchModuleImpl implements SearchModule {
 
 		
 	}
-	
+
+	@Override
 	private void deleteDocument(String language, Long documentId) throws Exception {
 		
 		StringBuilder productsIndex = new StringBuilder().append(PRODUCTS_INDEX).append(language);
